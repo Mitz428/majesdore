@@ -875,22 +875,54 @@ button {
   border-radius: var(--radius-full);
   background-color: var(--color-gray-bg);
   padding: 4px;
+  max-width: 580px;
+  width: 100%;
 }
 
 .tab-btn {
-  padding: 8px 24px;
+  flex: 1;
+  padding: 10px 20px;
   border-radius: var(--radius-full);
-  font-family: var(--font-en);
-  font-size: 0.9rem;
-  font-weight: 900;
-  text-transform: uppercase;
   color: var(--color-black);
   transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.tab-btn .tab-name-ja {
+  font-family: var(--font-base);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.tab-btn .tab-name-en {
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.tab-btn:hover {
+  color: var(--color-orange);
 }
 
 .tab-btn.active {
   background-color: var(--color-orange);
   color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 77, 0, 0.25);
+}
+
+.tab-btn.active .tab-name-en {
+  opacity: 0.95;
 }
 
 .pricing-panel {
@@ -898,6 +930,10 @@ button {
 }
 
 .pricing-panel.active {
+  display: block;
+}
+
+.pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -1236,7 +1272,7 @@ button {
     grid-template-columns: 1fr;
     gap: 10px;
   }
-  .pricing-panel.active {
+  .pricing-grid {
     grid-template-columns: 1fr;
     max-width: 480px;
     margin: 0 auto;
@@ -1527,18 +1563,25 @@ button {
     font-size: 0.82rem;
   }
   .tab-switch-wrapper {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     width: 100%;
   }
   .tab-switch-pill {
     width: 100%;
     display: flex;
+    padding: 3px;
   }
   .tab-btn {
     flex: 1;
     text-align: center;
-    padding: 8px 12px;
-    font-size: 0.82rem;
+    padding: 9px 4px;
+  }
+  .tab-btn .tab-name-ja {
+    font-size: clamp(0.74rem, 3.4vw, 0.88rem);
+    white-space: nowrap;
+  }
+  .tab-btn .tab-name-en {
+    font-size: 0.65rem;
   }
   .price-card {
     padding: 22px 14px;
