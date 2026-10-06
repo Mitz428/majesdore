@@ -1101,6 +1101,46 @@ button {
   margin-bottom: 12px;
 }
 
+.contact-info-block {
+  border-top: 2px solid var(--color-gray-bg);
+  padding-top: 16px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-info-item {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.5;
+}
+
+.contact-info-item .info-icon {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.contact-info-time {
+  color: var(--color-gray-dark);
+}
+
+.map-embed-card {
+  border: 2px solid var(--color-black);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: var(--color-gray-bg);
+  box-shadow: 3px 3px 0 var(--color-black);
+}
+
+.map-embed-card iframe {
+  width: 100%;
+  height: 280px;
+  display: block;
+}
+
 .field-group {
   display: flex;
   flex-direction: column;
@@ -1641,6 +1681,12 @@ button {
   }
   .contact-left h3 {
     font-size: 1.35rem;
+  }
+  .contact-info-item {
+    font-size: 0.82rem;
+  }
+  .map-embed-card iframe {
+    height: 230px;
   }
   .field-radios {
     grid-template-columns: 1fr;
