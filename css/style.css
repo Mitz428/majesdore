@@ -5,16 +5,39 @@
    ========================================================================== */
 
 :root {
-  --color-orange: #fe4f00;
-  --color-orange-hover: #e04500;
-  --color-orange-light: #fff2eb;
-  --color-black: #111111;
+  /* ==========================================================================
+     Forest Color Palette - MAJESDORE
+     Main Color: Deep Forest Green (#153e2a)
+     Accent Color: Warm Wood Brown (#8b572a)
+     ========================================================================== */
+  --color-primary: #153e2a;          /* メインカラー：深い緑 (Deep Forest Green) */
+  --color-primary-hover: #0e2b1d;    /* メインカラー：ホバー時 (Dark Forest) */
+  --color-primary-light: #edf4ef;    /* メインカラー淡色 (Sage Green Light) */
+  --color-primary-mid: #25593e;      /* メイン中間緑 */
+
+  --color-accent: #8b572a;           /* アクセントカラー：茶色 (Warm Wood & Bark Brown) */
+  --color-accent-hover: #72441e;     /* アクセントカラー：ホバー時 */
+  --color-accent-light: #f7f1eb;     /* アクセントカラー淡色 (Wood Beige Light) */
+  --color-accent-mid: #a76d3b;       /* アクセント中間ブラウン */
+
+  /* 後方互換用エイリアス（orangeクラス対応） */
+  --color-orange: var(--color-primary);
+  --color-orange-hover: var(--color-primary-hover);
+  --color-orange-light: var(--color-primary-light);
+
+  /* ブラウン用エイリアス */
+  --color-brown: var(--color-accent);
+  --color-brown-hover: var(--color-accent-hover);
+  --color-brown-light: var(--color-accent-light);
+
+  /* 森林トーンに最適化したニュートラルカラー */
+  --color-black: #141b16;            /* 深緑がかったフォレストチャコール */
   --color-black-pure: #000000;
   --color-white: #ffffff;
-  --color-gray-bg: #f5f5f5;
-  --color-gray-border: #e2e2e2;
-  --color-gray-dark: #444444;
-  --color-gray-muted: #888888;
+  --color-gray-bg: #f3f6f3;          /* やわらかなナチュラルグリーンホワイト */
+  --color-gray-border: #dbe2dc;      /* 自然なボーダー色 */
+  --color-gray-dark: #3e4841;        /* テキストダークグレー */
+  --color-gray-muted: #737e76;       /* サブテキストミュート */
 
   --font-en: 'Montserrat', -apple-system, sans-serif;
   --font-ja: 'Noto Sans JP', sans-serif;
@@ -81,7 +104,7 @@ button {
 .page-loader {
   position: fixed;
   inset: 0;
-  background-color: var(--color-orange);
+  background-color: var(--color-primary);
   z-index: 10000;
   pointer-events: none;
   transform: translateY(0%);
@@ -109,14 +132,14 @@ button {
   to { opacity: 1; transform: scale(1.02); }
 }
 
-/* Top 5px Orange Line */
+/* Top Gradient Accent Line (Forest Green to Earth Brown) */
 .top-accent-line {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 5px;
-  background-color: var(--color-orange);
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-mid) 50%, var(--color-accent) 100%);
   z-index: 9998;
 }
 
@@ -172,7 +195,7 @@ button {
 }
 
 .nav-item-link:hover {
-  color: var(--color-orange);
+  color: var(--color-primary);
 }
 
 /* ballaholic Menu Button */
@@ -192,7 +215,7 @@ button {
 }
 
 .btn-menu-toggle:hover {
-  color: var(--color-orange);
+  color: var(--color-primary);
 }
 
 .menu-bars-icon {
@@ -213,7 +236,7 @@ button {
 }
 
 /* ==========================================================================
-   Dual-Slide Menu Drawer (Orange Layer + White Content Panel)
+   Dual-Slide Menu Drawer (Forest Green Layer + White Content Panel)
    ========================================================================== */
 .menu-backdrop {
   position: fixed;
@@ -231,7 +254,7 @@ button {
   pointer-events: auto;
 }
 
-/* Orange Under-Layer */
+/* Forest Green Under-Layer */
 .menu-layer-orange {
   position: fixed;
   top: 0;
@@ -239,7 +262,7 @@ button {
   width: 100%;
   max-width: 620px;
   height: 100%;
-  background-color: var(--color-orange);
+  background-color: var(--color-primary);
   z-index: 9550;
   transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -301,7 +324,7 @@ button {
   font-family: var(--font-en);
   font-size: 1.5rem;
   font-weight: 900;
-  color: var(--color-orange);
+  color: var(--color-primary);
   text-transform: uppercase;
   letter-spacing: -0.01em;
 }
@@ -337,23 +360,41 @@ button {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-pill:hover {
   transform: translateY(-2px);
 }
 
+/* Primary Button (深い緑) */
+.btn-pill-primary,
 .btn-pill-orange {
-  background-color: var(--color-orange);
+  background-color: var(--color-primary);
   color: var(--color-white);
-  border: 2px solid var(--color-orange);
+  border: 2px solid var(--color-primary);
 }
 
+.btn-pill-primary:hover,
 .btn-pill-orange:hover {
-  background-color: var(--color-orange-hover);
-  border-color: var(--color-orange-hover);
-  box-shadow: 0 8px 24px rgba(254, 79, 0, 0.3);
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  box-shadow: 0 8px 24px rgba(21, 62, 42, 0.32);
+}
+
+/* Accent Button (茶色 / アースウッド) */
+.btn-pill-brown,
+.btn-pill-accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: 2px solid var(--color-accent);
+}
+
+.btn-pill-brown:hover,
+.btn-pill-accent:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  box-shadow: 0 8px 24px rgba(139, 87, 42, 0.32);
 }
 
 .btn-pill-black {
@@ -363,8 +404,8 @@ button {
 }
 
 .btn-pill-black:hover {
-  background-color: var(--color-orange);
-  border-color: var(--color-orange);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .btn-pill-outline {
@@ -374,9 +415,9 @@ button {
 }
 
 .btn-pill-outline:hover {
-  border-color: var(--color-orange);
-  color: var(--color-orange);
-  background-color: var(--color-orange-light);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background-color: var(--color-accent-light);
 }
 
 .btn-pill svg {
@@ -412,7 +453,7 @@ button {
 
 .hero-badge-tag {
   display: inline-block;
-  background-color: var(--color-orange);
+  background-color: var(--color-accent);
   color: #fff;
   font-family: var(--font-en);
   font-size: 0.75rem;
@@ -435,7 +476,7 @@ button {
 }
 
 .hero-giant-title span {
-  color: var(--color-orange);
+  color: var(--color-primary);
 }
 
 .hero-content-row {
@@ -450,7 +491,7 @@ button {
   font-weight: 900;
   font-size: 1.1rem;
   letter-spacing: 0.15em;
-  border-right: 2px solid var(--color-orange);
+  border-right: 2px solid var(--color-accent);
   padding-right: 12px;
   height: 160px;
   display: flex;
@@ -466,7 +507,7 @@ button {
 }
 
 .hero-minimal-desc strong {
-  color: var(--color-orange);
+  color: var(--color-primary);
   font-weight: 900;
 }
 
@@ -489,7 +530,7 @@ button {
   font-family: var(--font-en);
   font-size: 2rem;
   font-weight: 900;
-  color: var(--color-orange);
+  color: var(--color-primary);
   line-height: 1;
 }
 
@@ -565,7 +606,7 @@ button {
   font-family: var(--font-en);
   font-size: clamp(2.4rem, 5vw, 4rem);
   font-weight: 900;
-  color: var(--color-orange);
+  color: var(--color-primary);
   line-height: 0.95;
   text-transform: uppercase;
   letter-spacing: -0.03em;
@@ -599,7 +640,7 @@ button {
 }
 
 .feature-card:hover {
-  border-color: var(--color-orange);
+  border-color: var(--color-primary);
   transform: translateY(-4px);
 }
 
@@ -624,7 +665,7 @@ button {
   position: absolute;
   top: 14px;
   left: 14px;
-  background-color: var(--color-orange);
+  background-color: var(--color-primary);
   color: #fff;
   font-family: var(--font-en);
   font-size: 1.4rem;
@@ -666,7 +707,7 @@ button {
   width: 8px;
   height: 8px;
   border-radius: var(--radius-full);
-  background-color: var(--color-orange);
+  background-color: var(--color-accent);
 }
 
 /* ==========================================================================
@@ -690,7 +731,7 @@ button {
 }
 
 .gallery-card:hover {
-  border-color: var(--color-orange);
+  border-color: var(--color-primary);
   transform: translateY(-3px);
 }
 
@@ -709,7 +750,7 @@ button {
   position: absolute;
   top: 12px;
   left: 12px;
-  background-color: var(--color-orange);
+  background-color: var(--color-accent);
   color: #fff;
   font-family: var(--font-en);
   font-size: 0.75rem;
@@ -764,7 +805,7 @@ button {
   font-family: var(--font-en);
   font-size: 0.8rem;
   font-weight: 900;
-  color: var(--color-orange);
+  color: var(--color-accent);
   text-transform: uppercase;
   margin-bottom: 4px;
   display: block;
@@ -805,7 +846,7 @@ button {
    Pricing Section (No Tickets, Consultation Only)
    ========================================================================== */
 .policy-box {
-  border: 2px solid var(--color-orange);
+  border: 2px solid var(--color-accent);
   border-radius: var(--radius-card);
   background-color: #fff;
   padding: 28px;
@@ -822,7 +863,7 @@ button {
 }
 
 .policy-tag {
-  background-color: var(--color-orange);
+  background-color: var(--color-accent);
   color: #fff;
   font-family: var(--font-en);
   font-size: 0.75rem;
@@ -846,14 +887,14 @@ button {
   background-color: var(--color-gray-bg);
   padding: 16px;
   border-radius: var(--radius-sm);
-  border-top: 3px solid var(--color-orange);
+  border-top: 3px solid var(--color-primary);
 }
 
 .step-card span {
   font-family: var(--font-en);
   font-size: 0.75rem;
   font-weight: 900;
-  color: var(--color-orange);
+  color: var(--color-primary);
   display: block;
   margin-bottom: 4px;
 }
@@ -912,13 +953,13 @@ button {
 }
 
 .tab-btn:hover {
-  color: var(--color-orange);
+  color: var(--color-primary);
 }
 
 .tab-btn.active {
-  background-color: var(--color-orange);
+  background-color: var(--color-primary);
   color: #fff;
-  box-shadow: 0 4px 12px rgba(255, 77, 0, 0.25);
+  box-shadow: 0 4px 12px rgba(21, 62, 42, 0.28);
 }
 
 .tab-btn.active .tab-name-en {
@@ -951,14 +992,14 @@ button {
 }
 
 .price-card:hover {
-  border-color: var(--color-orange);
+  border-color: var(--color-primary);
   transform: translateY(-4px);
 }
 
 .price-card.featured {
-  border-color: var(--color-orange);
+  border-color: var(--color-accent);
   border-width: 3px;
-  background: linear-gradient(180deg, var(--color-orange-light) 0%, #fff 40%);
+  background: linear-gradient(180deg, var(--color-accent-light) 0%, #fff 40%);
 }
 
 .ribbon {
@@ -966,7 +1007,7 @@ button {
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--color-orange);
+  background-color: var(--color-accent);
   color: #fff;
   font-family: var(--font-en);
   font-size: 0.7rem;
@@ -1029,7 +1070,7 @@ button {
 
 .price-features li::before {
   content: '✓';
-  color: var(--color-orange);
+  color: var(--color-primary);
   font-weight: 900;
 }
 
@@ -1075,7 +1116,7 @@ button {
   width: 100%;
   max-width: 760px;
   background-color: #fff;
-  border: 2px dashed var(--color-orange);
+  border: 2px dashed var(--color-primary);
   border-radius: var(--radius-card);
   padding: 36px 24px;
   text-align: center;
@@ -1154,7 +1195,7 @@ button {
 }
 
 .field-label .req {
-  color: var(--color-orange);
+  color: var(--color-accent);
 }
 
 .field-input, .field-textarea {
@@ -1169,7 +1210,7 @@ button {
 }
 
 .field-input:focus, .field-textarea:focus {
-  border-color: var(--color-orange);
+  border-color: var(--color-primary);
 }
 
 .field-radios {
@@ -1191,7 +1232,7 @@ button {
 }
 
 .field-radio-opt input {
-  accent-color: var(--color-orange);
+  accent-color: var(--color-primary);
 }
 
 /* ==========================================================================
@@ -1201,7 +1242,7 @@ button {
   background-color: var(--color-black);
   color: #fff;
   padding: 70px 0 28px;
-  border-top: 5px solid var(--color-orange);
+  border-top: 5px solid var(--color-primary);
 }
 
 .footer-inner {
@@ -1236,7 +1277,7 @@ button {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  background-color: var(--color-orange);
+  background-color: var(--color-primary);
   color: #fff;
   border: 2px solid var(--color-black);
   padding: 12px 22px;
@@ -1248,16 +1289,16 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 8px 24px rgba(254, 79, 0, 0.35);
+  box-shadow: 0 8px 24px rgba(21, 62, 42, 0.35);
   z-index: 8500;
-  transition: transform 0.25s var(--ease-bounce), background-color 0.2s ease;
+  transition: transform 0.25s var(--ease-bounce), background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .floating-reserve-pill:hover {
   transform: translateY(-4px) scale(1.03);
   background-color: var(--color-black);
-  color: var(--color-orange);
-  border-color: var(--color-orange);
+  color: var(--color-accent-light);
+  border-color: var(--color-accent);
 }
 
 /* Modal */
@@ -1407,7 +1448,7 @@ button {
     writing-mode: horizontal-tb;
     height: auto;
     border-right: none;
-    border-left: 3px solid var(--color-orange);
+    border-left: 3px solid var(--color-accent);
     padding-left: 10px;
     padding-bottom: 0;
     padding-right: 0;
