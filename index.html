@@ -7,10 +7,10 @@
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" href="img/favicon.png">
 
-  <!-- Google Fonts: Montserrat (900) & Noto Sans JP -->
+  <!-- Google Fonts: Oswald (Architectural Display), Cormorant Garamond (Editorial Accent), Zen Kaku Gothic New (Refined Japanese) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Oswald:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,9 +19,6 @@
   <div class="page-loader" id="pageLoader">
     <div class="loader-badge">MAJESDORE</div>
   </div>
-
-  <!-- 最上部のフォレストグリーン＆ウッドブラウン アクセントライン -->
-  <div class="top-accent-line"></div>
 
   <!-- =================================================================
        Header
@@ -87,17 +84,21 @@
       </a>
       <a href="#reservation" class="panel-link-card">
         <span class="panel-link-en">05 Reservation</span>
-        <span class="panel-link-ja">Airリザーブ予約</span>
+        <span class="panel-link-ja">レンタル予約カレンダー</span>
       </a>
       <a href="#contact" class="panel-link-card">
         <span class="panel-link-en">06 Contact & Access</span>
-        <span class="panel-link-ja">お問い合わせ・アクセス</span>
+        <span class="panel-link-ja">パーソナル申込・お問い合わせ</span>
       </a>
     </div>
 
     <div class="panel-footer-actions">
-      <a href="#reservation" class="btn-pill btn-pill-orange menu-close-action" style="width: 100%;">
-        <span>無料カウンセリングを予約</span>
+      <a href="#contact" class="btn-pill btn-pill-orange menu-close-action" data-inquiry="counseling" style="width: 100%;">
+        <span>パーソナル無料相談（フォーム）</span>
+        <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
+      </a>
+      <a href="#reservation" class="btn-pill btn-pill-black menu-close-action" style="width: 100%;">
+        <span>レンタル予約（カレンダー）</span>
         <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
       </a>
     </div>
@@ -131,12 +132,13 @@
             </div>
 
             <div class="hero-btn-group">
-              <a href="#reservation" class="btn-pill btn-pill-orange">
-                <span>無料カウンセリング予約</span>
+              <a href="#contact" class="btn-pill btn-pill-orange" data-inquiry="counseling">
+                <span>パーソナル無料相談（フォーム）</span>
                 <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
               </a>
-              <a href="#features" class="btn-pill btn-pill-outline">
-                <span>サービスを見る</span>
+              <a href="#reservation" class="btn-pill btn-pill-black">
+                <span>レンタル予約（カレンダー）</span>
+                <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
               </a>
             </div>
 
@@ -156,17 +158,14 @@
             </div>
           </div>
 
-          <!-- 右側：角丸フレーム（ジム写真） -->
-          <div>
+          <!-- 右側：エディトリアルフレーム（ジム写真） -->
+          <div class="hero-visual-col">
             <div class="hero-visual-box">
               <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1000&q=80" alt="MAJESDORE GYM">
-              <div class="hero-visual-badge">
-                <div>
-                  <h4>MAJESDORE</h4>
-                  <p>完全個室プライベートジム</p>
-                </div>
-                <span style="color: var(--color-accent); font-size: 1.4rem;">★</span>
-              </div>
+            </div>
+            <div class="hero-visual-caption">
+              <span class="caption-place">OSAKA / KITASHINCHI</span>
+              <span class="caption-desc">完全個室プライベートジム &amp; レンタルスペース</span>
             </div>
           </div>
         </div>
@@ -191,14 +190,15 @@
               <span class="feature-badge-no">01</span>
             </div>
             <div class="feature-body">
+              <span class="feature-flow-badge feature-flow-personal">予約方法：お問い合わせフォーム</span>
               <h3>パーソナルトレーニング</h3>
               <ul class="feature-points">
-                <li><span class="dot"></span> 明朗な都度払い</li>
-                <li><span class="dot"></span> 無料カウンセリングからスタート</li>
-                <li><span class="dot"></span> プライベート空間</li>
+                <li><span class="dot"></span> フォームから無料カウンセリング申込</li>
+                <li><span class="dot"></span> 明朗な都度払い・無理な勧誘なし</li>
+                <li><span class="dot"></span> 完全個室のプライベート空間</li>
               </ul>
-              <a href="#pricing" class="btn-pill btn-pill-orange" style="margin-top: auto; width: 100%;">
-                <span>プラン・受講の流れ</span>
+              <a href="#contact" class="btn-pill btn-pill-orange" data-inquiry="counseling" style="margin-top: auto; width: 100%;">
+                <span>フォームから無料相談を申し込む</span>
                 <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
               </a>
             </div>
@@ -211,14 +211,15 @@
               <span class="feature-badge-no">02</span>
             </div>
             <div class="feature-body">
+              <span class="feature-flow-badge feature-flow-rental">予約方法：オンライン即時予約</span>
               <h3>レンタルジム（時間貸し）</h3>
               <ul class="feature-points">
                 <li><span class="dot"></span> 1時間 ¥2,200〜 完全個室貸切</li>
-                <li><span class="dot"></span> Airリザーブで即時予約OK</li>
+                <li><span class="dot"></span> カレンダーから24時間即時予約OK</li>
                 <li><span class="dot"></span> 個人トレ・合トレ・撮影・商用指導可</li>
               </ul>
               <a href="#reservation" class="btn-pill btn-pill-black" style="margin-top: auto; width: 100%;">
-                <span>空き状況を見る</span>
+                <span>予約カレンダーを見る</span>
                 <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
               </a>
             </div>
@@ -309,8 +310,8 @@
               <span class="trainer-badge">NASM-PES</span>
               <span class="trainer-badge">姿勢改善スペシャリスト</span>
             </div>
-            <a href="#reservation" class="btn-pill btn-pill-orange">
-              <span>無料カウンセリングを予約</span>
+            <a href="#contact" class="btn-pill btn-pill-orange" data-inquiry="counseling">
+              <span>フォームから無料カウンセリング申込</span>
               <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
             </a>
           </div>
@@ -353,7 +354,7 @@
             <div class="steps-row">
               <div class="step-card">
                 <span>STEP 01</span>
-                <h5>無料カウンセリング予約</h5>
+                <h5>フォームから無料カウンセリング申込</h5>
               </div>
               <div class="step-card">
                 <span>STEP 02</span>
@@ -380,8 +381,8 @@
                 <li>体験トレーニング30分</li>
                 <li>ウェア・水・タオル無料</li>
               </ul>
-              <a href="#reservation" class="btn-pill btn-pill-orange" style="margin-top: auto;">
-                <span>無料カウンセリング予約</span>
+              <a href="#contact" class="btn-pill btn-pill-orange" data-inquiry="counseling" style="margin-top: auto;">
+                <span>フォームから申し込む</span>
                 <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
               </a>
             </div>
@@ -398,7 +399,7 @@
                 <li>食事サポート付き</li>
                 <li>※無料カウンセリング後に申込可能</li>
               </ul>
-              <a href="#reservation" class="btn-pill btn-pill-outline" style="margin-top: auto;">
+              <a href="#contact" class="btn-pill btn-pill-outline" data-inquiry="counseling" style="margin-top: auto;">
                 <span>無料カウンセリングへ</span>
               </a>
             </div>
@@ -415,7 +416,7 @@
                 <li>集中ボディメイク</li>
                 <li>※無料カウンセリング後に申込可能</li>
               </ul>
-              <a href="#reservation" class="btn-pill btn-pill-outline" style="margin-top: auto;">
+              <a href="#contact" class="btn-pill btn-pill-outline" data-inquiry="counseling" style="margin-top: auto;">
                 <span>無料カウンセリングへ</span>
               </a>
             </div>
@@ -437,7 +438,7 @@
                 <li>同伴者最大2名追加無料</li>
               </ul>
               <a href="#reservation" class="btn-pill btn-pill-black" style="margin-top: auto;">
-                <span>Airリザーブで予約</span>
+                <span>空き状況から予約する</span>
               </a>
             </div>
 
@@ -453,7 +454,7 @@
                 <li>個人トレ・合トレ・撮影OK</li>
               </ul>
               <a href="#reservation" class="btn-pill btn-pill-black" style="margin-top: auto;">
-                <span>Airリザーブで予約</span>
+                <span>空き状況から予約する</span>
               </a>
             </div>
 
@@ -466,7 +467,7 @@
                 <li>フリーランス指導・商用</li>
                 <li>定期枠の優先確保</li>
               </ul>
-              <a href="#contact" class="btn-pill btn-pill-outline" style="margin-top: auto;">
+              <a href="#contact" class="btn-pill btn-pill-outline" data-inquiry="rental" style="margin-top: auto;">
                 <span>問い合わせる</span>
               </a>
             </div>
@@ -476,55 +477,69 @@
     </section>
 
     <!-- =================================================================
-         Section 05: Reservation (AirReserve)
+         Section 05: Reservation (Rental Space Only)
          ================================================================= -->
     <section class="sec-wrap sec-wrap-gray" id="reservation">
       <div class="container">
         <div class="sec-header">
-          <h2 class="sec-title-en">Reservation</h2>
-          <p class="sec-title-ja">Airリザーブ カレンダー予約</p>
+          <h2 class="sec-title-en">Rental Reservation</h2>
+          <p class="sec-title-ja">レンタルスペース予約カレンダー</p>
+        </div>
+
+        <!-- 予約ルート案内 -->
+        <div class="booking-route-notice">
+          <div class="booking-route-notice-text">
+            <span class="route-badge">レンタルスペース専用</span>
+            <p>こちらは<strong>時間貸しレンタルジム専用</strong>の予約カレンダーです。パーソナルトレーニング（無料カウンセリング・体験）をご希望の方は、お問い合わせフォームよりお申し込みください。</p>
+          </div>
+          <a href="#contact" class="btn-pill btn-pill-orange booking-route-btn" data-inquiry="counseling">
+            <span>パーソナル申込フォームへ</span>
+            <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
+          </a>
         </div>
 
         <div class="reservation-box">
           <div class="reservation-top-bar">
-            <h4>Air RESERVE オンライン予約</h4>
-            <span style="font-size: 0.8rem; color: #aaa;">24時間いつでも空き状況確認・ご予約可能</span>
+            <h4>ONLINE RESERVATION</h4>
+            <a href="https://airrsv.net/majesdore/calendar/" target="_blank" rel="noopener noreferrer" class="reservation-ext-link">別画面で開く ↗</a>
           </div>
 
-          <!-- Airリザーブ 埋め込みエリア -->
-          <div class="reservation-embed-view" id="airReserveContainer">
-            <iframe type="text/html" frameborder="0" width="100%" height="1000px" src="https://airrsv.net/majesdore/calendar/embed/"></iframe>
-            <div class="air-reserve-credit" style="text-align:right;font-size:10px;color:#555;margin: 16px 0 0 0;line-height:160%;">このページは<a style="color:#555;text-decoration:underline;" href="https://airregi.jp/reserve/?vos=otrsvxototzzx00000099" target="_blank" rel="noopener noreferrer">予約システム『Airリザーブ』<img src="https://cdn.airrsv.net/img/icon/open_link_black.svg" style="margin:2px 2px 4px;vertical-align:top;display:inline;"></a>が提供しています</div>
+          <!-- 予約カレンダー埋め込みエリア -->
+          <div class="reservation-embed-view" id="reservationCalendarContainer">
+            <iframe class="reservation-iframe" type="text/html" frameborder="0" scrolling="no" width="100%" height="1400" src="https://airrsv.net/majesdore/calendar/embed/"></iframe>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =================================================================
-         Section 06: Contact
+         Section 06: Contact & Personal Counseling
          ================================================================= -->
     <section class="sec-wrap" id="contact">
       <div class="container">
         <div class="sec-header">
-          <h2 class="sec-title-en">Contact & Access</h2>
-          <p class="sec-title-ja">お問い合わせ・アクセス</p>
+          <h2 class="sec-title-en">Contact & Counseling</h2>
+          <p class="sec-title-ja">パーソナル申込・お問い合わせ・アクセス</p>
         </div>
 
         <div class="contact-split">
           <!-- 左側 -->
           <div class="contact-left">
             <h3>GET IN TOUCH</h3>
-            <p style="font-size: 0.95rem; color: var(--color-gray-dark); margin-bottom: 20px;">
-              無料カウンセリング、時間貸しレンタルのご見学など、お気軽にお問い合わせください。
+            <p style="font-size: 0.95rem; color: var(--color-gray-dark); margin-bottom: 12px;">
+              <strong>パーソナルトレーニングの無料カウンセリング・体験申込</strong>や、施設見学・定期商用利用のご相談はこちらからお気軽にお問い合わせください。
+            </p>
+            <p class="contact-rental-note">
+              ※レンタルスペースの通常予約は<a href="#reservation">予約カレンダー</a>から24時間即時ご予約いただけます。
             </p>
             <div class="contact-info-block">
               <p class="contact-info-item">
-                <span class="info-icon">📍</span>
-                <span><strong>所在地：</strong>大阪・北新地</span>
+                <span class="info-label">ADDRESS</span>
+                <span>大阪・北新地</span>
               </p>
               <p class="contact-info-item contact-info-time">
-                <span class="info-icon">⏰</span>
-                <span><strong>営業時間：</strong>07:00 〜 23:00（不定休・完全予約制）</span>
+                <span class="info-label">HOURS</span>
+                <span>07:00 〜 23:00（不定休・完全予約制）</span>
               </p>
             </div>
 
@@ -549,11 +564,11 @@
               <div class="field-radios">
                 <label class="field-radio-opt">
                   <input type="radio" name="inquiry_type" value="counseling" checked>
-                  <span>無料カウンセリング</span>
+                  <span>パーソナル無料カウンセリング・体験</span>
                 </label>
                 <label class="field-radio-opt">
                   <input type="radio" name="inquiry_type" value="rental">
-                  <span>時間貸しレンタル</span>
+                  <span>時間貸し・定期商用利用の相談</span>
                 </label>
                 <label class="field-radio-opt">
                   <input type="radio" name="inquiry_type" value="preview">
@@ -591,11 +606,17 @@
     </section>
   </main>
 
-  <!-- 右下固定のクイック予約ボタン -->
-  <a href="#reservation" class="floating-reserve-pill" aria-label="予約へ">
-    <span>RESERVE</span>
-    <svg viewBox="0 0 20 20" style="width: 14px; height: 14px;"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
-  </a>
+  <!-- 右下固定のクイック導線（パーソナル相談 / レンタル予約） -->
+  <div class="floating-action-group" aria-label="クイック予約・相談">
+    <a href="#contact" class="floating-reserve-pill floating-pill-personal" data-inquiry="counseling">
+      <span>パーソナル相談</span>
+      <svg viewBox="0 0 20 20" style="width: 14px; height: 14px;"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
+    </a>
+    <a href="#reservation" class="floating-reserve-pill floating-pill-rental">
+      <span>レンタル予約</span>
+      <svg viewBox="0 0 20 20" style="width: 14px; height: 14px;"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
+    </a>
+  </div>
 
   <!-- =================================================================
        Footer

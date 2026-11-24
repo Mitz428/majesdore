@@ -80,7 +80,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Contact Form Submission
+  // 5. Contact Form Submission & Inquiry Type Pre-selection
+  const inquiryTriggers = document.querySelectorAll('[data-inquiry]');
+  inquiryTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const type = trigger.getAttribute('data-inquiry');
+      const radio = document.querySelector(`input[name="inquiry_type"][value="${type}"]`);
+      if (radio) {
+        radio.checked = true;
+      }
+    });
+  });
+
   const contactForm = document.getElementById('contactForm');
   const successModal = document.getElementById('successModal');
   const modalCloseBtn = document.getElementById('modalCloseBtn');
@@ -143,5 +154,31 @@ document.addEventListener('DOMContentLoaded', () => {
     galleryModal.addEventListener('click', (e) => {
       if (e.target === galleryModal) galleryModal.classList.remove('open');
     });
+  }
+
+  // 7. Subtle Editorial Scroll Reveal
+  const revealTargets = document.querySelectorAll(
+    '.sec-header, .feature-card, .gallery-card, .trainer-card, .policy-box, .price-card, .booking-route-notice, .reservation-box, .contact-split'
+  );
+
+  if ('IntersectionObserver' in window && revealTargets.length > 0) {
+    revealTargets.forEach((el, idx) => {
+      el.classList.add('reveal-item');
+      el.style.transitionDelay = `${(idx % 3) * 70}ms`;
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    revealTargets.forEach(el => observer.observe(el));
   }
 });
