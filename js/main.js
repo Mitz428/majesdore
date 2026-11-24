@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 7. Subtle Editorial Scroll Reveal
   const revealTargets = document.querySelectorAll(
-    '.sec-header, .feature-card, .gallery-card, .trainer-card, .policy-box, .price-card, .booking-route-notice, .reservation-box, .contact-split'
+    '.sec-header, .feature-card, .gallery-card, .trainer-card, .policy-box, .price-card, .booking-route-notice, .reservation-box, .contact-split, .single-form-wrap, .cross-service-bar, .access-split'
   );
 
   if ('IntersectionObserver' in window && revealTargets.length > 0) {

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パーソナルトレーニング | MAJESDORE（マジェスドーレ）</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Oswald:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =================================================================
+       Header
+       ================================================================= -->
+  <header class="hub-header">
+    <div class="container header-container">
+      <a href="index.html" class="header-brand" aria-label="MAJESDORE">
+        <img src="img/logo.png" alt="マジェスドーレ Majesdore">
+      </a>
+
+      <nav class="header-links">
+        <a href="index.html" class="nav-item-link">Top</a>
+        <a href="personal.html" class="nav-item-link is-active">Personal</a>
+        <a href="rental.html" class="nav-item-link">Rental</a>
+        <a href="index.html#facility" class="nav-item-link">Facility</a>
+        <a href="index.html#access" class="nav-item-link">Access</a>
+      </nav>
+
+      <div>
+        <button class="btn-menu-toggle" id="btnMenuToggle" aria-label="メニュー">
+          <div class="menu-bars-icon">
+            <span></span>
+            <span></span>
+          </div>
+          <span>Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =================================================================
+       Dual-Layer Drawer Menu
+       ================================================================= -->
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+  <div class="menu-layer-orange" id="menuLayerOrange"></div>
+  <aside class="menu-panel" id="menuPanel" aria-label="メニューナビゲーション">
+    <div class="panel-header">
+      <img src="img/logo.png" alt="MAJESDORE" style="height: 36px; width: auto;">
+      <button class="btn-menu-toggle" id="panelCloseBtn" aria-label="閉じる">
+        <span style="font-size: 1.3rem; margin-right: 4px;">✕</span>
+        <span>Close</span>
+      </button>
+    </div>
+
+    <div class="panel-links">
+      <a href="index.html" class="panel-link-card">
+        <span class="panel-link-en">00 Top</span>
+        <span class="panel-link-ja">トップページ</span>
+      </a>
+      <a href="personal.html" class="panel-link-card">
+        <span class="panel-link-en">01 Personal</span>
+        <span class="panel-link-ja">パーソナルトレーニング</span>
+      </a>
+      <a href="rental.html" class="panel-link-card">
+        <span class="panel-link-en">02 Rental</span>
+        <span class="panel-link-ja">レンタルジム（時間貸し）</span>
+      </a>
+      <a href="index.html#facility" class="panel-link-card">
+        <span class="panel-link-en">03 Facility</span>
+        <span class="panel-link-ja">施設・設備写真</span>
+      </a>
+      <a href="index.html#access" class="panel-link-card">
+        <span class="panel-link-en">04 Access</span>
+        <span class="panel-link-ja">アクセス・営業時間</span>
+      </a>
+    </div>
+
+    <div class="panel-footer-actions">
+      <a href="#counseling-form" class="btn-pill btn-pill-orange menu-close-action" style="width: 100%;">
+        <span>無料カウンセリング申込</span>
+        <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
+      </a>
+      <a href="rental.html#reserve" class="btn-pill btn-pill-black menu-close-action" style="width: 100%;">
+        <span>レンタル予約（カレンダー）</span>
+        <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- =================================================================
+         Subpage Hero: Personal Training
+         ================================================================= -->
+    <section class="subpage-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+          <a href="index.html">Top</a>
+          <span class="sep">/</span>
+          <span>Personal Training</span>
+        </nav>
+
+        <div class="subpage-hero-grid">
+          <div>
+            <span class="hero-badge-tag">01 / PERSONAL TRAINING</span>
+            <h1 class="subpage-title-en">Personal Training</h1>
+            <p class="subpage-title-ja">完全個室パーソナルトレーニング</p>
+            <p class="subpage-lead">
+              チケット販売や無理な勧誘は一切なし。まずは無料カウンセリング＆体験でお身体の状態を丁寧に伺い、目的とライフスタイルに合った指導プランをご提案します。
+            </p>
+          </div>
+          <div class="subpage-hero-cta">
+            <a href="#counseling-form" class="btn-pill btn-pill-orange" style="width: 100%;">
+              <span>無料カウンセリングを申し込む</span>
+              <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
+            </a>
+            <span class="subpage-hero-note">所要時間60分・手ぶらOK（ウェア・水・タオル無料）</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Trainer
+         ================================================================= -->
+    <section class="sec-wrap sec-wrap-gray" id="trainer">
+      <div class="container">
+        <div class="sec-header">
+          <h2 class="sec-title-en">Trainer</h2>
+          <p class="sec-title-ja">専任トレーナー</p>
+        </div>
+
+        <div class="trainer-card">
+          <div class="trainer-photo">
+            <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=800&q=80" alt="Ibuki Yamamoto">
+          </div>
+          <div>
+            <span class="trainer-role-tag">HEAD TRAINER</span>
+            <h3 class="trainer-name">Ibuki Yamamoto</h3>
+            <p class="trainer-quote">
+              運動初心者の方にこそ、身体が変わる楽しさを実感してほしい。<br>
+              チケット販売は一切行わず、無料カウンセリングでお身体の状態を丁寧に伺った上で最適な指導を行います。
+            </p>
+            <div class="trainer-badges">
+              <span class="trainer-badge">NSCA-CPT 認定トレーナー</span>
+              <span class="trainer-badge">NASM-PES</span>
+              <span class="trainer-badge">姿勢改善スペシャリスト</span>
+            </div>
+            <a href="#counseling-form" class="btn-pill btn-pill-orange">
+              <span>無料カウンセリングを申し込む</span>
+              <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Flow & Pricing (Personal Only)
+         ================================================================= -->
+    <section class="sec-wrap" id="pricing">
+      <div class="container">
+        <div class="sec-header center">
+          <h2 class="sec-title-en">Flow &amp; Pricing</h2>
+          <p class="sec-title-ja">受講の流れ・料金プラン</p>
+        </div>
+
+        <div class="policy-box">
+          <div class="policy-head-row">
+            <span class="policy-tag">POLICY</span>
+            <h4 class="policy-title">パーソナルはチケット販売なし・無料カウンセリング受付のみ</h4>
+          </div>
+          <div class="steps-row">
+            <div class="step-card">
+              <span>STEP 01</span>
+              <h5>フォームから無料カウンセリング申込</h5>
+            </div>
+            <div class="step-card">
+              <span>STEP 02</span>
+              <h5>体験トレーニング (手ぶらOK)</h5>
+            </div>
+            <div class="step-card">
+              <span>STEP 03</span>
+              <h5>納得の上でスタート</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="price-card featured">
+            <div class="ribbon">まずはここから受付</div>
+            <h4 class="price-plan-title">無料カウンセリング＆体験</h4>
+            <div class="price-digits-row">
+              <span class="yen">¥</span>
+              <span class="digits">0</span>
+              <span class="unit">/ 60分</span>
+            </div>
+            <ul class="price-features">
+              <li>姿勢・体組成チェック</li>
+              <li>体験トレーニング30分</li>
+              <li>ウェア・水・タオル無料</li>
+            </ul>
+            <a href="#counseling-form" class="btn-pill btn-pill-orange" style="margin-top: auto;">
+              <span>フォームから申し込む</span>
+              <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
+            </a>
+          </div>
+
+          <div class="price-card">
+            <h4 class="price-plan-title">月4回コース</h4>
+            <div class="price-digits-row">
+              <span class="yen">¥</span>
+              <span class="digits">35,200</span>
+              <span class="unit">/ 月</span>
+            </div>
+            <ul class="price-features">
+              <li>60分セッション × 月4回</li>
+              <li>食事サポート付き</li>
+              <li>※無料カウンセリング後に申込可能</li>
+            </ul>
+            <a href="#counseling-form" class="btn-pill btn-pill-outline" style="margin-top: auto;">
+              <span>無料カウンセリングへ</span>
+            </a>
+          </div>
+
+          <div class="price-card">
+            <h4 class="price-plan-title">月8回コース</h4>
+            <div class="price-digits-row">
+              <span class="yen">¥</span>
+              <span class="digits">66,000</span>
+              <span class="unit">/ 月</span>
+            </div>
+            <ul class="price-features">
+              <li>60分セッション × 月8回</li>
+              <li>集中ボディメイク</li>
+              <li>※無料カウンセリング後に申込可能</li>
+            </ul>
+            <a href="#counseling-form" class="btn-pill btn-pill-outline" style="margin-top: auto;">
+              <span>無料カウンセリングへ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Counseling Form (Personal Training Only)
+         ================================================================= -->
+    <section class="sec-wrap sec-wrap-gray" id="counseling-form">
+      <div class="container">
+        <div class="sec-header center">
+          <h2 class="sec-title-en">Counseling Form</h2>
+          <p class="sec-title-ja">無料カウンセリング・体験お申し込み</p>
+        </div>
+
+        <div class="single-form-wrap">
+          <p class="single-form-intro">
+            ご希望の日時やご相談内容をご記入ください。担当トレーナーより24時間以内に日程調整のご連絡を差し上げます。
+          </p>
+
+          <form id="contactForm" novalidate>
+            <div class="field-group">
+              <label class="field-label">ご希望内容 <span class="req">※</span></label>
+              <div class="field-radios">
+                <label class="field-radio-opt">
+                  <input type="radio" name="inquiry_type" value="counseling" checked>
+                  <span>無料カウンセリング＆体験（¥0）</span>
+                </label>
+                <label class="field-radio-opt">
+                  <input type="radio" name="inquiry_type" value="preview">
+                  <span>まずは相談・施設見学のみ</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="userName" class="field-label">お名前 <span class="req">※</span></label>
+              <input type="text" id="userName" class="field-input" placeholder="山田 太郎" required>
+            </div>
+
+            <div class="field-group">
+              <label for="userEmail" class="field-label">メールアドレス <span class="req">※</span></label>
+              <input type="email" id="userEmail" class="field-input" placeholder="example@email.com" required>
+            </div>
+
+            <div class="field-group">
+              <label for="userMessage" class="field-label">ご希望日時・ご相談内容 <span class="req">※</span></label>
+              <textarea id="userMessage" class="field-textarea" rows="4" placeholder="例：平日19時以降、または土日午前に体験希望。運動初心者ですが姿勢改善したいです。" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-pill btn-pill-orange" style="width: 100%;">
+              <span>無料カウンセリングを申し込む</span>
+              <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cross-link to Rental Space -->
+    <section class="sec-wrap" style="padding: 56px 0;">
+      <div class="container">
+        <div class="cross-service-bar">
+          <div>
+            <span class="cross-service-label">OTHER SERVICE</span>
+            <h4>時間貸しレンタルジムをお探しの方へ</h4>
+            <p>1時間 ¥2,200〜・完全個室貸切。カレンダーから24時間即時ご予約いただけます。</p>
+          </div>
+          <a href="rental.html" class="btn-pill btn-pill-black">
+            <span>レンタルジムを見る</span>
+            <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 右下固定（パーソナル専用） -->
+  <div class="floating-action-group" aria-label="無料カウンセリング申込">
+    <a href="#counseling-form" class="floating-reserve-pill floating-pill-personal">
+      <span>無料カウンセリング申込</span>
+      <svg viewBox="0 0 20 20" style="width: 14px; height: 14px;"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
+    </a>
+  </div>
+
+  <!-- =================================================================
+       Footer
+       ================================================================= -->
+  <footer class="hub-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <img src="img/logo.png" alt="MAJESDORE" style="height: 44px; width: auto; filter: brightness(0) invert(1); margin-bottom: 12px;">
+          <p style="font-size: 0.85rem; color: #aaa;">完全個室パーソナルジム＆時間貸しレンタルスペース</p>
+        </div>
+        <div class="footer-nav-links">
+          <a href="index.html">Top</a>
+          <a href="personal.html">Personal</a>
+          <a href="rental.html">Rental</a>
+          <a href="index.html#facility">Facility</a>
+          <a href="index.html#access">Access</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 MAJESDORE. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- 送信完了モーダル -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-card">
+      <div style="font-family: var(--font-en); font-size: 2rem; font-weight: 500; color: var(--color-primary); margin-bottom: 8px; letter-spacing: 0.06em;">
+        THANK YOU
+      </div>
+      <p style="font-weight: 500; margin-bottom: 24px;">お申し込みを受け付けました。24時間以内にご連絡いたします。</p>
+      <button class="btn-pill btn-pill-black" id="modalCloseBtn" style="width: 100%;">閉じる</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

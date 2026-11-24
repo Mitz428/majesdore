@@ -237,11 +237,13 @@ ul {
   transition: transform 0.35s var(--ease-editorial);
 }
 
-.nav-item-link:hover {
+.nav-item-link:hover,
+.nav-item-link.is-active {
   color: var(--color-primary);
 }
 
-.nav-item-link:hover::after {
+.nav-item-link:hover::after,
+.nav-item-link.is-active::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -1269,7 +1271,7 @@ ul {
 .reservation-embed-view .reservation-iframe {
   width: 100%;
   max-width: 100%;
-  height: 1400px;
+  height: 1680px;
   border: 0;
   display: block;
   overflow: hidden;
@@ -1552,6 +1554,181 @@ ul {
 }
 
 /* ==========================================================================
+   Subpage Hero, Breadcrumb, Cross-Service Banner & Focused Form Card
+   ========================================================================== */
+.subpage-hero {
+  padding-top: 132px;
+  padding-bottom: 64px;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-border);
+}
+
+.subpage-hero-rental {
+  background-color: var(--color-gray-bg);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-en);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gray-muted);
+  margin-bottom: 24px;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumb .sep {
+  color: var(--color-gray-border-strong);
+}
+
+.subpage-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(28px, 4vw, 60px);
+  align-items: end;
+}
+
+.subpage-title-en {
+  font-family: var(--font-en);
+  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  font-weight: 600;
+  line-height: 0.96;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+}
+
+.subpage-hero-rental .subpage-title-en {
+  color: var(--color-black);
+}
+
+.subpage-title-ja {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-black);
+  letter-spacing: 0.06em;
+  margin-bottom: 18px;
+}
+
+.subpage-lead {
+  font-size: 0.94rem;
+  color: var(--color-gray-dark);
+  line-height: 1.9;
+  max-width: 580px;
+}
+
+.subpage-hero-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.subpage-hero-note {
+  font-size: 0.78rem;
+  color: var(--color-gray-muted);
+}
+
+.single-form-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-gray-border);
+  border-radius: var(--radius-card);
+  padding: 44px;
+}
+
+.single-form-intro {
+  font-size: 0.92rem;
+  color: var(--color-gray-dark);
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-gray-border);
+  line-height: 1.8;
+}
+
+.cross-service-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 32px 36px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-gray-border);
+  border-radius: var(--radius-card);
+}
+
+.cross-service-label {
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.cross-service-bar h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.cross-service-bar p {
+  font-size: 0.86rem;
+  color: var(--color-gray-dark);
+}
+
+.access-split {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 44px;
+  align-items: center;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-gray-border);
+  border-radius: var(--radius-card);
+  padding: 44px;
+}
+
+@media (max-width: 992px) {
+  .subpage-hero-grid,
+  .access-split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .subpage-hero {
+    padding-top: 96px;
+    padding-bottom: 44px;
+  }
+  .single-form-wrap {
+    padding: 24px 18px;
+  }
+  .cross-service-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 18px;
+    gap: 16px;
+  }
+  .cross-service-bar .btn-pill {
+    width: 100%;
+  }
+  .access-split {
+    padding: 24px 18px;
+  }
+}
+
+/* ==========================================================================
    Responsive Rules (SP Optimization)
    ========================================================================== */
 @media (max-width: 992px) {
@@ -1821,27 +1998,26 @@ ul {
     justify-content: center;
   }
   .reservation-box {
-    margin: 0 -18px;
-    border-radius: 0;
-    border-left: 0;
-    border-right: 0;
-    max-width: none;
-    width: calc(100% + 36px);
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-card);
   }
   .reservation-top-bar {
-    padding: 14px 18px;
+    padding: 14px 16px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
   .reservation-embed-view {
-    padding: 0;
+    padding: 12px 10px;
     overflow: hidden;
   }
   .reservation-embed-view .reservation-iframe {
     width: 100%;
     max-width: 100%;
-    height: 1500px;
+    height: 1820px;
   }
 
   /* Contact */
