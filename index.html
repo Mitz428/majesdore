@@ -487,27 +487,14 @@
 
         <div class="reservation-box">
           <div class="reservation-top-bar">
-            <h4>Air RESERVE 埋め込みスペース</h4>
-            <span style="font-size: 0.8rem; color: #aaa;">※Airリザーブ埋め込み枠</span>
+            <h4>Air RESERVE オンライン予約</h4>
+            <span style="font-size: 0.8rem; color: #aaa;">24時間いつでも空き状況確認・ご予約可能</span>
           </div>
 
-          <!-- 
-            ======================================================================
-            【Airリザーブ 埋め込みエリア】
-            Airリザーブのiframe/scriptタグをここにそのまま貼り付けてください
-            ======================================================================
-          -->
+          <!-- Airリザーブ 埋め込みエリア -->
           <div class="reservation-embed-view" id="airReserveContainer">
-            <div class="simulated-calendar">
-              <div style="font-family: var(--font-en); font-size: 1.6rem; font-weight: 900; color: var(--color-primary); margin-bottom: 8px;">
-                AIR RESERVE CALENDAR
-              </div>
-              <p style="font-weight: 700; margin-bottom: 16px;">ここに予約カレンダーが表示されます</p>
-              <a href="https://airrsv.net/" target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-orange">
-                <span>Airリザーブ予約ページを開く</span>
-                <svg viewBox="0 0 20 20"><path d="M12 4l-1.4 1.4L15.2 10H4v2h11.2l-4.6 4.6L12 18l8-8z"/></svg>
-              </a>
-            </div>
+            <iframe type="text/html" frameborder="0" width="100%" height="1000px" src="https://airrsv.net/majesdore/calendar/embed/"></iframe>
+            <div class="air-reserve-credit" style="text-align:right;font-size:10px;color:#555;margin: 16px 0 0 0;line-height:160%;">このページは<a style="color:#555;text-decoration:underline;" href="https://airregi.jp/reserve/?vos=otrsvxototzzx00000099" target="_blank" rel="noopener noreferrer">予約システム『Airリザーブ』<img src="https://cdn.airrsv.net/img/icon/open_link_black.svg" style="margin:2px 2px 4px;vertical-align:top;display:inline;"></a>が提供しています</div>
           </div>
         </div>
       </div>
